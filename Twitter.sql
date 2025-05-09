@@ -1,0 +1,16 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(128) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    phone_number VARCHAR(255) UNIQUE,
+    display_name VARCHAR(255) NOT NULL,
+    bio VARCHAR(255),
+    location VARCHAR(255),
+    website VARCHAR(255),
+    birth_date DATE,
+    profile_image VARCHAR(255),
+    avatar_image VARCHAR(255),
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
